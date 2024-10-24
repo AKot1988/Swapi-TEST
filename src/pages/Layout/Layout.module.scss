@@ -1,0 +1,8 @@
+@import "../../app/variables.scss";
+
+.container {
+  background-color: $mainBackground;
+  flex-grow: 1;
+  width: 100vw;
+  height: 100vh;
+}

@@ -1,0 +1,22 @@
+@import "../../app/variables.scss";
+
+.homePage {
+  &Container {
+    
+    flex-wrap: wrap;
+    margin: 0 auto;
+    
+    height: calc(100% - 200px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  &Title,
+  &Description {
+    margin: 0;
+    color: $main;
+    max-width: 80%;
+  }
+}

@@ -1,0 +1,35 @@
+@import "../../app/variables.scss";
+
+.container {
+  flex-shrink: 0;
+  background-color: $mainBackground;
+}
+
+.header {
+  box-sizing: border-box;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: $contentWidth;
+  margin: 0 auto;
+  height: 100px;
+  background: $mainGradient;
+
+  &Title {
+    font-weight: bold;
+    color: $main;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 5px;
+    flex-direction: column;
+    height: auto;
+  }
+}

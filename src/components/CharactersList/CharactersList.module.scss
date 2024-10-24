@@ -1,0 +1,29 @@
+@import "../../app/variables.scss";
+
+.charactersPage {
+  height: calc(100vh - 200px);
+  width: $contentWidth;
+  margin: 0 auto;
+  background-color: $mainGradient;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  &Title {
+    margin: 0;
+    color: $main;
+    max-width: 80%;
+  }
+
+  &Cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+}

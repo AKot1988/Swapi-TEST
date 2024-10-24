@@ -1,0 +1,17 @@
+.characterCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: #bebebe;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  &Name, 
+  &Info {
+    overflow-x: hidden;
+  }
+}
