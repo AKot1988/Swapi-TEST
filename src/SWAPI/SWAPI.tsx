@@ -66,3 +66,9 @@ export const charactersListLoader = async ({
   const data = await SWapiCharacters(requestedCharacters);
   return data;
 }
+
+export const characterIDExtendedInfoLoader = async ({params}: LoaderFunctionArgs) => {
+  console.log(params)
+  const data = await SWapiGeneral(SWapiEntityType.PEOPLE, 1);
+  return data;
+}
