@@ -3,6 +3,7 @@ import { useNavigation } from "react-router-dom";
 import { useLoaderData, useNavigate, useParams } from "react-router";
 import { characterInstanse } from "../../SWAPI/helper";
 import { emptyCharacter } from "./helper";
+import { COMMON_ROUTES } from "../../router/routesNames";
 import { CharacterCard, DeathStarLoader } from "../../components";
 import classes from "./CharactersList.module.scss";
 
@@ -23,14 +24,16 @@ const CharacterList: FC = () => {
           <DeathStarLoader />
         ) : (
           loaderData.map((character: characterInstanse, index) => {
+            const characterID = character.url?.split("/")[5];
             if (!character.name) {
               return (
                 <CharacterCard
                   key={index}
                   data={emptyCharacter}
                   clickhandler={() => {
-                    console.log("clacked user is ", character);
-                    return navigate("/");
+                    return navigate(
+                      `${COMMON_ROUTES.ABOUTCHARACTER}/${characterID}`
+                    );
                   }}
                 />
               );
@@ -40,8 +43,9 @@ const CharacterList: FC = () => {
                   key={character.name}
                   data={character}
                   clickhandler={() => {
-                    console.log("clacked user is ", character);
-                    return navigate("/");
+                    return navigate(
+                      `${COMMON_ROUTES.ABOUTCHARACTER}/${characterID}`
+                    );
                   }}
                 />
               );

@@ -2,14 +2,14 @@
 
 .homePage {
   &Container {
-    
-    flex-wrap: wrap;
+    height: calc(100vh - 200px);
+    max-width: $contentWidth;
     margin: 0 auto;
-    
-    height: calc(100% - 200px);
+    background-color: $mainGradient;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
   }
 
