@@ -42,8 +42,7 @@ const CustomReactFlowComponent: FC<CustomReactFlowComponentProps> = ({
         fitView={true}
       >
         <Controls />
-        <MiniMap />
-        {/* <Background variant="dots" gap={12} size={1} /> */}
+        {/* <MiniMap /> */}
       </ReactFlow>
     </div>
   );

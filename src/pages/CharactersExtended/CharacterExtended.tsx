@@ -13,15 +13,18 @@ const CharactersExtended: FC = () => {
   const mapedData = dataMapperToReactFlow(data);
   return (
     <div className={classes.characterExtendedPage}>
-      <h1>Character Extended</h1>
-      <CustomReactFlowComponent
-        initialEdges={mapedData.edges}
-        initialNodes={mapedData.nodes}
-      />
-      <div className={classes.characterExtendedPageContent}>
-        {state === "loading" ? <DeathStarLoader /> : null}
-      </div>
-      <button onClick={() => navigate(-1)}>Go back</button>
+      {state === "loading" ? (
+        <DeathStarLoader />
+      ) : (
+        <>
+          <h1>Character Extended</h1>
+          <CustomReactFlowComponent
+            initialEdges={mapedData.edges}
+            initialNodes={mapedData.nodes}
+          />
+          <button onClick={() => navigate(-1)}>Go back</button>
+        </>
+      )}
     </div>
   );
 };
