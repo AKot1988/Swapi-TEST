@@ -75,3 +75,11 @@ RANGE = '__range', // string -- A start and end value for range queries, separat
 NEGATE = '!=', // string -- Used after a filter to negate the query.
 MULTIPLE = '__in', // string -- Multiple values for the attribute, separated by commas.
 }
+
+export type characterIDExtendedInfo = {
+  characterName: string;
+  films: {
+    filmTitle: string;
+    pilotedStarships: starshipInstanse[];
+  }[];
+};

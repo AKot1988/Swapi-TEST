@@ -6,6 +6,7 @@ import {
   SWapiInstanceKeys,
   filterOptions,
   starshipInstanse,
+  characterIDExtendedInfo,
 } from "./helper";
 import { LoaderFunctionArgs } from "react-router";
 
@@ -84,9 +85,11 @@ export const charactersListLoader = async ({ params }: LoaderFunctionArgs) => {
   return data;
 };
 
+
+
 export const characterIDExtendedInfoLoader = async ({
   params,
-}: LoaderFunctionArgs) => {
+}: LoaderFunctionArgs) : Promise<characterIDExtendedInfo> => {
   const { characterID } = params;
   if (characterID === undefined) {
     throw new Error("No character ID provided in the URL");
@@ -95,6 +98,7 @@ export const characterIDExtendedInfoLoader = async ({
     SWapiEntityType.PEOPLE,
     +characterID
   );
+  const characterName = characterData.name;
   const filmsURLs: string[] = characterData.films;
   const filmsIDs = filmsURLs.map((url) => +url.split("/")[5]);
   const filmsTitleInvolvedShips = filmsIDs.map(async (ID) => {
@@ -131,7 +135,11 @@ export const characterIDExtendedInfoLoader = async ({
       };
     }
   );
-  return filteredResultByCharacter; //here is filtered result by character. Hear ve have films and starships that character piloted
+  const preparedDatatoFlow = {
+    characterName: characterName,
+    films: filteredResultByCharacter,
+  };
+  return preparedDatatoFlow; //here is filtered result by character. Hear ve have films and starships that character piloted
 };
 
 export const filterRequest = async (
@@ -157,5 +165,4 @@ export const filterRequest = async (
     console.error("Помилка при запиті:", error);
     throw error;
   }
- 
 };

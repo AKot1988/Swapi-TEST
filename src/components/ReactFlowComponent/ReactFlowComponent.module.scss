@@ -1,0 +1,16 @@
+@import "../../app/variables.scss";
+
+.flow {
+  // height: calc(100vh - 200px);
+  max-width: $contentWidth;
+  margin: 0 auto;
+  background-color: $mainGradient;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  & * {
+    color: black;
+  }
+}

@@ -5,4 +5,6 @@ export { default as Loader } from "./Loader/Loader";
 export { default as DeathStarLoader } from "./DeathStarLoader/DeathStarLoader";
 export { default as CharactersList } from "./CharactersList/CharactersList.tsx";
 export { default as CustomNavLink } from "./CustomNavLink/CustomNavLink.tsx";
+export { default as ReactFlowComponent } from "./ReactFlowComponent/ReactFlowComponent.tsx";
+export { default as CustomReactFlowComponent } from "./ReactFlowComponent/ReactFlowComponent.tsx";
 

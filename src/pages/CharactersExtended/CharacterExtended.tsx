@@ -1,19 +1,25 @@
 import { FC } from "react";
-import { DeathStarLoader } from "../../components";
+import { DeathStarLoader, CustomReactFlowComponent } from "../../components";
+import { characterIDExtendedInfo } from "../../SWAPI/helper";
 import { useNavigation } from "react-router-dom";
 import { useParams, useLoaderData, useNavigate } from "react-router";
 import classes from "./CharacterExtended.module.scss";
+import { dataMapperToReactFlow } from "./helper";
 
 const CharactersExtended: FC = () => {
   const { state } = useNavigation();
   const navigate = useNavigate();
-  const data = useLoaderData();
-  console.log(data);
+  const data = useLoaderData() as characterIDExtendedInfo;
+  const mapedData = dataMapperToReactFlow(data);
   return (
     <div className={classes.characterExtendedPage}>
       <h1>Character Extended</h1>
+      <CustomReactFlowComponent
+        initialEdges={mapedData.edges}
+        initialNodes={mapedData.nodes}
+      />
       <div className={classes.characterExtendedPageContent}>
-        {state === "loading" ? <DeathStarLoader /> : <h1>data has been loaded</h1>}
+        {state === "loading" ? <DeathStarLoader /> : null}
       </div>
       <button onClick={() => navigate(-1)}>Go back</button>
     </div>

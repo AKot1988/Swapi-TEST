@@ -10,9 +10,13 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-
-  & * {
+  
+  & h1 {
     color: $main;
+  }
+
+  & link {
+    display: hidden;
   }
   & button {
     color: black;
