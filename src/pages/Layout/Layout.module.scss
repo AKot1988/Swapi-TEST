@@ -1,7 +1,10 @@
 @import "../../app/variables.scss";
 
 .container {
+  display: flex;
+  flex-direction: column;
   background-color: $mainBackground;
+  justify-content: space-between;
   flex-grow: 1;
   width: 100vw;
   height: 100vh;

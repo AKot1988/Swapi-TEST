@@ -1,9 +1,7 @@
 import React, { FC, useCallback } from "react";
 import {
   ReactFlow,
-  MiniMap,
   Controls,
-  Background,
   useNodesState,
   useEdgesState,
   addEdge,
@@ -23,16 +21,12 @@ const CustomReactFlowComponent: FC<CustomReactFlowComponentProps> = ({
 }: CustomReactFlowComponentProps) => {
   const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
-  console.log(nodes, edges);
   const onConnect = useCallback(
     (params: any) => setEdges((eds) => addEdge(params, eds)),
-    [setEdges],
+    [setEdges]
   );
   return (
-    <div
-      style={{ width: "100%", height: "70%"}}
-      className={classes.flow}
-    >
+    <div style={{ width: "100%", height: "100%" }} className={classes.flow}>
       <ReactFlow
         nodes={nodes}
         edges={edges}
@@ -42,7 +36,6 @@ const CustomReactFlowComponent: FC<CustomReactFlowComponentProps> = ({
         fitView={true}
       >
         <Controls />
-        {/* <MiniMap /> */}
       </ReactFlow>
     </div>
   );

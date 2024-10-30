@@ -10,20 +10,6 @@ import {
 } from "./helper";
 import { LoaderFunctionArgs } from "react-router";
 
-// export const SWapiMain = async () => {
-//   let charactersEntity = null;
-//   await fetch(`https://swapi.dev/api/people/${currentCharacterID}`)
-//     .then((response) => {
-//       return response.json();
-//     })
-//     .then((data) => {
-//       charactersEntity = data.results;
-//     });
-//   console.log(charactersEntity);
-//   return charactersEntity;
-// };
-
-// const request = await SWapiMain();
 
 export const SWapiCharacters = async (data: SWAPIREQUEST) => {
   let charactersArray: characterInstanse[] = [];
@@ -41,9 +27,6 @@ export const SWapiCharacters = async (data: SWAPIREQUEST) => {
   return charactersArray;
 };
 
-// const request: characterInstanse[] = await SWAPI({
-//   characterQuantity: 5,
-// } as SWAPIREQUEST);
 
 export const SWapiGeneral = async (
   type: SWapiEntityType,
@@ -70,7 +53,6 @@ export const SWapiGeneral = async (
   return data;
 };
 
-// const request = await SWapiGeneral(SWapiEntityType.PEOPLE, 2);
 
 export const charactersListLoader = async ({ params }: LoaderFunctionArgs) => {
   let requestedCharacters: SWAPIREQUEST = {
@@ -79,7 +61,6 @@ export const charactersListLoader = async ({ params }: LoaderFunctionArgs) => {
   };
   if (params.startCharacterID !== undefined) {
     requestedCharacters.startCharacterID = +params.startCharacterID;
-    // requestedCharactersNumbers.startCharacterNumber = +(params.startCharacterID);
   }
   const data = await SWapiCharacters(requestedCharacters);
   return data;

@@ -2,7 +2,6 @@ import { characterIDExtendedInfo } from "../../SWAPI/helper";
 
 export const dataMapperToReactFlow = (data: characterIDExtendedInfo) => {
   const sourseData = data;
-  console.log(data);
   let mapedData = null;
   let nodes: Object[] = [];
   let edges: Object[] = [];
@@ -13,7 +12,6 @@ export const dataMapperToReactFlow = (data: characterIDExtendedInfo) => {
       starshipsCounter++;
     });
   });
-  console.log(starshipsCounter);
   let myltiplyer = 0
 
   const displayWidth = window.innerWidth;
@@ -66,6 +64,5 @@ export const dataMapperToReactFlow = (data: characterIDExtendedInfo) => {
   });
 
   mapedData = { nodes, edges };
-  console.log(mapedData);
   return mapedData;
 };

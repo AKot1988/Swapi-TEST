@@ -1,14 +1,13 @@
 @import "../../app/variables.scss";
 
 .characterExtendedPage {
-  height: calc(100vh - 200px);
-  max-width: $contentWidth;
-  margin: 0 auto;
-  background-color: $mainGradient;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  width: 100%;
+  max-width: $contentWidth;
+  flex-grow: 1;
+  margin: 0 auto;
+  background-color: $mainGradient;
   align-items: center;
   
   & h1 {
@@ -20,8 +19,7 @@
   }
   & button {
     color: black;
-  }
+    background-color: $main;
 
-  &Content {
   }
 }

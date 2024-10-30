@@ -1,6 +1,6 @@
-import { characterInstanse, SWapiEntityType } from "../../SWAPI/helper";
+import { characterInstanse } from "../../SWAPI/helper";
 
-export type CharacterCardProps {
-    data: characterInstanse;
-    clickhandler: () => void;
-}
+export type CharacterCardProps = {
+  data: characterInstanse;
+  clickhandler: () => void;
+};

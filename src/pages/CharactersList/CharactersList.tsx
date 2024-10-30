@@ -7,7 +7,7 @@ import { COMMON_ROUTES } from "../../router/routesNames";
 import { CharacterCard, DeathStarLoader } from "../../components";
 import classes from "./CharactersList.module.scss";
 
-const CharacterList: FC = () => {
+const CharactersList: FC = () => {
   const { state } = useNavigation();
   const navigate = useNavigate();
   const { startCharacterID } = useParams();
@@ -17,6 +17,7 @@ const CharacterList: FC = () => {
   const nextButtonDisabled = state === "loading" ? true : false;
 
   return (
+
     <div className={classes.charactersPage}>
       <h1 className={classes.charactersPageTitle}>CharacterList</h1>
       <div className={classes.charactersPageCards}>
@@ -83,4 +84,4 @@ const CharacterList: FC = () => {
   );
 };
 
-export default CharacterList;
+export default CharactersList;

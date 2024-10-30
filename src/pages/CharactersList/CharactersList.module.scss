@@ -1,12 +1,13 @@
 @import "../../app/variables.scss";
 
 .charactersPage {
-  height: calc(100vh - 200px);
+  width: 100%;
   max-width: $contentWidth;
   margin: 0 auto;
   background-color: $mainGradient;
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
@@ -29,5 +30,7 @@
 
   & button {
     margin: 10px;
+    width: 200px;
+    background-color: $main;
   }
 }

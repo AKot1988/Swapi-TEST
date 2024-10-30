@@ -1,3 +1,5 @@
+@import "../../app/variables.scss";
+
 .deathstar-container {
   display: flex;
   justify-content: center;
@@ -9,7 +11,7 @@
 .deathstar {
   width: 100px;
   height: 100px;
-  background-image: url('https://w7.pngwing.com/pngs/450/267/png-transparent-star-wars-death-star-galacticos-sphere-spherical-star-wars-other-film-galactic-empire-thumbnail.png'); // URL до твоєї картинки
+  background-image: url("https://w7.pngwing.com/pngs/450/267/png-transparent-star-wars-death-star-galacticos-sphere-spherical-star-wars-other-film-galactic-empire-thumbnail.png"); // URL до твоєї картинки
   background-size: cover; // Фон заповнює весь div
   border-radius: 50%;
   animation: scalePulse 1.5s infinite ease-in-out;

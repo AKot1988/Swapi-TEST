@@ -1,6 +1,5 @@
 import { Home, Not_Found } from "../pages";
-import { CharactersList } from "../components";
-import { CharactersExtended } from "../pages";
+import { CharactersExtended, CharactersList } from "../pages";
 import {
   charactersListLoader,
   characterIDExtendedInfoLoader,

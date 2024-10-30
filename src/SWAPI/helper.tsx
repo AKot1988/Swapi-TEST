@@ -69,7 +69,6 @@ export enum SWapiEntityType {
 export type SWapiInstanceKeys = keyof filmInstanse | keyof characterInstanse | keyof starshipInstanse;
 
 export enum filterOptions {
-// CLIMATE = 'climate',  // string -- The field name you want to filter on.
 CONTAINS = '__contains', // string -- A substring to match within the attribute value.
 RANGE = '__range', // string -- A start and end value for range queries, separated by a comma.
 NEGATE = '!=', // string -- Used after a filter to negate the query.
