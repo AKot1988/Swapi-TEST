@@ -8,7 +8,7 @@ export const dataMapperToReactFlow = (data: characterIDExtendedInfo) => {
 
   let starshipsCounter = 0;
   sourseData.films.forEach((film) => {
-    film.pilotedStarships.forEach((starship) => {
+    film.pilotedStarships.forEach(() => {
       starshipsCounter++;
     });
   });
@@ -41,7 +41,7 @@ export const dataMapperToReactFlow = (data: characterIDExtendedInfo) => {
     nodes.push(filmNode);
     edges.push(character_film_edge);
 
-    film.pilotedStarships.forEach((starship, starshipIndex) => {
+    film.pilotedStarships.forEach((starship) => {
       const starshipMappedName = starship.name.split(" ").join("");
       const filmMappedName = film.filmTitle.split(" ").join("");
       const starshipNode = {

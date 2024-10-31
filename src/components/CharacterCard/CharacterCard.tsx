@@ -1,6 +1,6 @@
 import { FC, useState, useEffect } from "react";
 
-import { characterInstanse, SWapiEntityType } from "../../SWAPI/helper";
+import { SWapiEntityType } from "../../SWAPI/helper";
 import { CharacterCardProps } from "./helper";
 import { SWapiGeneral } from "../../SWAPI/SWAPI";
 import classes from "./CharacterCard.module.scss";

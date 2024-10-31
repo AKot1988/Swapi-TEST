@@ -21,6 +21,7 @@ const CustomReactFlowComponent: FC<CustomReactFlowComponentProps> = ({
 }: CustomReactFlowComponentProps) => {
   const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
+  console.log(setNodes);
   const onConnect = useCallback(
     (params: any) => setEdges((eds) => addEdge(params, eds)),
     [setEdges]
