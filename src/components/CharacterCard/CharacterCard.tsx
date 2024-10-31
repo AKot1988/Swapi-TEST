@@ -1,5 +1,4 @@
 import { FC, useState, useEffect } from "react";
-
 import { SWapiEntityType } from "../../SWAPI/helper";
 import { CharacterCardProps } from "./helper";
 import { SWapiGeneral } from "../../SWAPI/SWAPI";
