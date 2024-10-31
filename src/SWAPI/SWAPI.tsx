@@ -1,11 +1,9 @@
 import {
   SWAPIREQUEST,
   characterInstanse,
-  filmInstanse,
   SWapiEntityType,
   SWapiInstanceKeys,
   filterOptions,
-  starshipInstanse,
   characterIDExtendedInfo,
 } from "./helper";
 import { LoaderFunctionArgs } from "react-router";
