@@ -1,3 +1,7 @@
+# From AKot dev
+To start the project, you need to clone the entire folder to your local storage, open it in the VSC IDE, and run npm install in the console to install all necessary dependencies. After installation, run npm run dev in the console and go to the local site host.
+
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
